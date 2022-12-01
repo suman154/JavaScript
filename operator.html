@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+</head>
+<body>
+    <h1 style="text-align: center;">This is js OPERATOR</h1>
+    <hr style="border: 10px solid red;">  <br>
+
+
+<div>
+    <h1>select operation number</h1>
+    <h3>1: add</h3>
+    <h3>2: sub</h3>
+    <input id='my1' type="text" value="" placeholder="enter num1">
+    <br>
+    <input id='my2' type="text" value="" placeholder="enter num2">
+    <br>
+    <input  id='opr' type="text" value="" placeholder="enter opr number">
+    <br> <hr>
+    <button onclick="calculate()">CLICK To Result below</button>
+    <p id="result">...</p>
+    
+</div>
+
+<script>
+    function calculate()
+    {
+        let num1, num2, oprnum, result;
+        num1 = parseInt(document.getElementById('my1').value);
+        num2 = parseInt(document.getElementById('my2').value);
+       // oprnum = parseInt(document.getElementById('opr').value);
+        oprnum = document.getElementById('opr').value;
+
+        switch(oprnum)
+        {
+            case 'add':
+                result = num1 + num2;
+                break;
+            case 2: 
+                result = num1 - num2;
+                break;
+            default:
+                result = "sorry no option available";
+                break;
+        }
+        document.getElementById('result').innerHTML = result
+    }
+</script>
+
+
+
+
+
+<script src="operator.js"></script>
+</body>
+</html>
